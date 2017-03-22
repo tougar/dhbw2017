@@ -1,4 +1,4 @@
-package com.dhbw.dhbw2017.programming;
+package com.dhbw.dhbw2017.programming.bank.v1;
 
 public class Bank {
 
@@ -20,7 +20,7 @@ public class Bank {
         printBalance(accountNumberCustomer1);
         // the customer wants to withdraw 30 EUR from his account
         withdraw(accountNumberCustomer1,30.00);
-        // the customer wants to transfer 25 EUR to the account with the number 2
+        // the customer wants to transfer 25 EUR to the account with the number v2
         transfer(accountNumberCustomer1,2,25);
         // the bank employee wants to add the interest for all accounts at the end of the year
         // print the balance of all accounts before the interest calculation
