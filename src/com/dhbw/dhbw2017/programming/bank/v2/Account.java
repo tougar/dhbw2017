@@ -25,7 +25,7 @@ public class Account {
     }
 
     public void printBalance(){
-        System.out.println("The balance of account "+accountNumber+" is "+checkBalance()+" €"); ;
+        System.out.println("The balance of account "+accountNumber+" is "+checkBalance()+" EUR"); ;
     }
     public double checkBalance(){
         return balance;
@@ -35,7 +35,7 @@ public class Account {
 
         if(checkBalance()-amount>0){
             balance -= amount;
-            System.out.println("Successfully withdrawn "+amount+"€ from the account "+accountNumber);
+            System.out.println("Successfully withdrawn "+amount+"EUR from the account "+accountNumber);
         }else{
             System.out.println("Unsufficient funds");
         }
