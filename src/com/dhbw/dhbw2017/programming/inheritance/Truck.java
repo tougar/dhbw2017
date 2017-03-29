@@ -2,6 +2,9 @@ package com.dhbw.dhbw2017.programming.inheritance;
 
 public class Truck extends Vehicle {
 
+	public Truck() {
+		maxPassengers=2;
+	}
 	@Override
 	public void startEngine() {
 		System.out.print("Brooom  ");
