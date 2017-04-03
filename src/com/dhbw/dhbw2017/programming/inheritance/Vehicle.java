@@ -14,6 +14,12 @@ public class Vehicle {
 	int heading = 0;
 	public int currentPassengers=0;
 	public int maxPassengers=1;
+	/***
+	 *  0 = 'N' neutral gear
+	 *  positive -> forward gears
+	 *  -1 = 'R' reverse gear
+	 */	
+	int gear = 0;
 	
 	public void startEngine(){
 		engineRuninning = true;
@@ -75,6 +81,102 @@ public class Vehicle {
 		 System.out.println("Unboarding successful");
 		 
 		}		
+	}
+	
+	public void shift(int targetGear){
+		
+		switch (targetGear) {
+		case 1:
+			if(speed>=0 && speed < 10){
+				gear = targetGear;
+				System.out.println("Shifted into gear "+gear);
+			}else{
+				System.out.println("Wrong speed for gear "+gear);
+			}			
+			break;
+		case 2:
+			if(speed>=5 && speed <= 20){
+				gear = targetGear;
+				System.out.println("Shifted into gear "+gear);
+			}else{
+				System.out.println("Wrong speed for gear "+gear);
+			}			
+			break;
+		case 3:
+			if(speed>=10 && speed <= 30){
+				gear = targetGear;
+				System.out.println("Shifted into gear "+gear);
+			}else{
+				System.out.println("Wrong speed for gear "+gear);
+			}			
+			break;
+		case 4:
+			if(speed>=20 && speed <= 50){
+				gear = targetGear;
+				System.out.println("Shifted into gear "+gear);
+			}else{
+				System.out.println("Wrong speed for gear "+gear);
+			}			
+			break;
+		case 5:
+			if(speed>=45 && speed < 70){
+				gear = targetGear;
+				System.out.println("Shifted into gear "+gear);
+			}else{
+				System.out.println("Wrong speed for gear "+gear);
+			}			
+			break;	
+			
+		case 6:
+			if(speed>=60 && speed < 90){
+				gear = targetGear;
+				System.out.println("Shifted into gear "+gear);
+			}else{
+				System.out.println("Wrong speed for gear "+gear);
+			}			
+			break;	
+			
+			
+		case 7:
+			if(speed>=80 && speed < 110){
+				gear = targetGear;
+				System.out.println("Shifted into gear "+gear);
+			}else{
+				System.out.println("Wrong speed for gear "+gear);
+			}			
+			break;	
+			
+		case 8:
+			if(speed>=90 && speed < 120){
+				gear = targetGear;
+				System.out.println("Shifted into gear "+gear);
+			}else{
+				System.out.println("Wrong speed for gear "+gear);
+			}			
+			break;	
+		case 9:
+			if(speed>=100 && speed < 130){
+				gear = targetGear;
+				System.out.println("Shifted into gear "+gear);
+			}else{
+				System.out.println("Wrong speed for gear "+gear);
+			}			
+			break;
+		case 0: gear = 0; break;
+		case -1: 
+			if(speed <=0){
+				gear = -1;
+				System.out.println("Shifted into reverse gear");
+			} else{
+				System.out.println("Wrong speed for gear "+gear);
+			}
+			
+			
+		default:
+			System.out.println("Please select a valid gear");
+			break;
+		}
+		
 	}
 	
 	
