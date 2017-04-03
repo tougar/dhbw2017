@@ -27,15 +27,54 @@ public class TicTacToe {
 	}
 	
 	private static void checkAllBoxedFilled() {
-		// TODO Auto-generated method stub
 		
+		for (char[] rows : playground) {
+			for (char column : rows) {
+				if(column == ' ') return;
+			}
+		}
+		System.out.println("Game Over: Draw! All fields are taken.");
+		System.exit(0);
 	}
 
 	private static void check3inARow() {
 
-		if(playground[0][0] ==  playground[0][1] &&)
+if(playground[0][0] != ' ' && playground[0][0] ==  playground[0][1] && playground[0][2] == playground [0][0]){
+	win();
+}
+
+if(playground[1][0] != ' ' && playground[1][0] ==  playground[1][1] && playground[1][2] == playground [1][0]){
+	win();
+}
+
+if(playground[2][0] != ' ' && playground[2][0] ==  playground[2][1] && playground[2][2] == playground [2][0]){
+	win();
+}
+
+if(playground[0][0] != ' ' && playground[0][0] ==  playground[1][0] && playground[2][0] == playground [0][0]){
+	win();
+}
+if( playground[0][1] != ' ' && playground[0][1] ==  playground[1][1] && playground[2][1] == playground [0][1]){
+	win();
+}
+if(playground[0][2] != ' ' && playground[0][2] ==  playground[1][2] && playground[2][2] == playground [0][2]){
+	win();
+}
+
+if( playground[0][0] != ' ' && playground[0][0] ==  playground[1][1] && playground[2][2] == playground [0][0]){
+	win();
+}
+
+if(playground[0][2] != ' ' && playground[0][2] ==  playground[1][1] && playground[2][0] == playground [1][1]){
+	win();
+}
 	
 	
+	}
+
+	private static void win() {
+		System.out.println("Game over: Player " + currentPlayer +" won.");
+		System.exit(0);
 	}
 
 	public static void switchPlayer(){
